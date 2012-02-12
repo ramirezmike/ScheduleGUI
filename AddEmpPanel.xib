@@ -12,7 +12,7 @@
     </object>
     <object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
       <bool key="EncodedWithXMLCoder">YES</bool>
-      <integer value="176"/>
+      <integer value="175"/>
     </object>
     <object class="NSArray" key="IBDocument.PluginDependencies">
       <bool key="EncodedWithXMLCoder">YES</bool>
@@ -2652,6 +2652,14 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
           </object>
           <int key="connectionID">385</int>
         </object>
+        <object class="IBConnectionRecord">
+          <object class="IBOutletConnection" key="connection">
+            <string key="label">prepCheck</string>
+            <reference key="source" ref="1001"/>
+            <reference key="destination" ref="974917566"/>
+          </object>
+          <int key="connectionID">386</int>
+        </object>
       </object>
       <object class="IBMutableOrderedSet" key="objectRecords">
         <object class="NSArray" key="orderedObjects">
@@ -4425,7 +4433,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
         </object>
       </object>
       <nil key="sourceID"/>
-      <int key="maxID">385</int>
+      <int key="maxID">386</int>
     </object>
     <object class="IBClassDescriber" key="IBDocument.Classes">
       <object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4439,10 +4447,12 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <bool key="EncodedWithXMLCoder">YES</bool>
               <string>addEmployee:</string>
               <string>closeWindow:</string>
+              <string>getPrepCheckValue:</string>
               <string>setParent:</string>
             </object>
             <object class="NSMutableArray" key="dict.values">
               <bool key="EncodedWithXMLCoder">YES</bool>
+              <string>id</string>
               <string>id</string>
               <string>id</string>
               <string>id</string>
@@ -4454,6 +4464,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <bool key="EncodedWithXMLCoder">YES</bool>
               <string>addEmployee:</string>
               <string>closeWindow:</string>
+              <string>getPrepCheckValue:</string>
               <string>setParent:</string>
             </object>
             <object class="NSMutableArray" key="dict.values">
@@ -4464,6 +4475,10 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               </object>
               <object class="IBActionInfo">
                 <string key="name">closeWindow:</string>
+                <string key="candidateClassName">id</string>
+              </object>
+              <object class="IBActionInfo">
+                <string key="name">getPrepCheckValue:</string>
                 <string key="candidateClassName">id</string>
               </object>
               <object class="IBActionInfo">
@@ -4487,6 +4502,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <string>panel</string>
               <string>parentWindow</string>
               <string>posMtrx</string>
+              <string>prepCheck</string>
               <string>satIn</string>
               <string>satOut</string>
               <string>sunIn</string>
@@ -4511,6 +4527,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <string>id</string>
               <string>id</string>
               <string>NSMatrix</string>
+              <string>NSButton</string>
               <string>NSTextField</string>
               <string>NSTextField</string>
               <string>NSTextField</string>
@@ -4538,6 +4555,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <string>panel</string>
               <string>parentWindow</string>
               <string>posMtrx</string>
+              <string>prepCheck</string>
               <string>satIn</string>
               <string>satOut</string>
               <string>sunIn</string>
@@ -4594,6 +4612,10 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <object class="IBToOneOutletInfo">
                 <string key="name">posMtrx</string>
                 <string key="candidateClassName">NSMatrix</string>
+              </object>
+              <object class="IBToOneOutletInfo">
+                <string key="name">prepCheck</string>
+                <string key="candidateClassName">NSButton</string>
               </object>
               <object class="IBToOneOutletInfo">
                 <string key="name">satIn</string>

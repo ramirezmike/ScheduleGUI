@@ -26,7 +26,9 @@
 -(void)save;
 
 -(IBAction)sendCalltoShowAddEmpWindow:(id)sender;
+-(IBAction)sendCalltoShowEditEmpWindow:(id)sender;
 -(IBAction)removeSelected:(id)sender;
+
 
 @property (copy) NSArray* employeeData;
 

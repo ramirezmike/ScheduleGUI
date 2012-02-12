@@ -1,23 +1,19 @@
 //
-//  AddEmpPanelController.h
+//  EditEmpPanelController.h
 //
-//  Created by Michael Ramirez on 2/8/12.
+//  Created by Michael Ramirez on 2/11/12.
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 
-@interface AddEmpPanelController : NSWindowController {
+@interface EditEmpPanelController : NSWindowController {
+
 	id parentWindow;
 	
-	IBOutlet id panel;
 	
-	IBOutlet NSTextField *maxhTxt;
-    IBOutlet NSTextField *minhTxt;
-    IBOutlet NSTextField *nameTxt;
-	IBOutlet NSPopUpButton *ordrPop;
-	IBOutlet NSMatrix *posMtrx;
-	
+	IBOutlet NSArrayController *arrayControllerEmployeesToEdit;
+
 	IBOutlet NSTextField *monIn;
 	IBOutlet NSTextField *monOut;
 	IBOutlet NSTextField *tueIn;
@@ -32,22 +28,14 @@
 	IBOutlet NSTextField *satOut;
 	IBOutlet NSTextField *sunIn;
 	IBOutlet NSTextField *sunOut;
-	
-	IBOutlet NSButton* prepCheck;
-		
-	NSString *text;
-	NSMutableDictionary* availabilityTimes;
-	
+
+	IBOutlet id panel;
 	
 }
 
 -(void)showInWindow:(NSWindow *)window;
 -(IBAction)closeWindow:(id)sender;
--(IBAction)addEmployee:(id)sender;
 -(void)setParent:(id)sender;
-- (NSString *)getPrepCheckValue;
--(NSMutableDictionary *)addAvailability;
-
-
+-(void)bindArrayController;
 
 @end

@@ -8,19 +8,21 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class MainWindowController,AddEmpPanelController;
+@class MainWindowController,AddEmpPanelController,EditEmpPanelController;
 @interface ScheduleGUIAppDelegate : 
 NSObject <NSApplicationDelegate> {
 
 @private
 	MainWindowController *mainWin;
 	AddEmpPanelController *empAddWin;
+	EditEmpPanelController *empEditWin;
 	
 
 }
 
 -(IBAction)showMainWindow:(id)sender;
 -(IBAction)showAddEmpWindow:(id)sender;
+-(IBAction)showEditEmpWindow:(id)sender;
 -(IBAction)saveCalltoEverything:(id)sender;
 
 @end

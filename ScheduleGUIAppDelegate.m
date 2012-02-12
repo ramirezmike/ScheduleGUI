@@ -9,8 +9,10 @@
 #import "ScheduleGUIAppDelegate.h"
 #import "MainWindowController.h"
 #import "AddEmpPanelController.h"
+#import "EditEmpPanelController.h"
 
-@class MainWindowController,AddEmpPanelController;
+@class MainWindowController,AddEmpPanelController,
+	EditEmpPanelController;
 @implementation ScheduleGUIAppDelegate
 
 -(void) awakeFromNib {
@@ -34,6 +36,16 @@
 	[empAddWin setParent:sender];
 	[empAddWin showInWindow:[NSApp mainWindow]];
 }
+
+-(IBAction) showEditEmpWindow:(id)sender {
+	if (!empEditWin) {
+		empEditWin = [[EditEmpPanelController alloc]init];
+	}
+	
+	[empEditWin setParent:sender];
+	[empEditWin showInWindow:[NSApp mainWindow]];
+}
+
 
 
 -(IBAction)saveCalltoEverything:(id)sender {

@@ -48,7 +48,9 @@
 		[maxhTxt stringValue],@"maxHrs",
 		posValue,@"position",
 		ordrValue,@"order",
+		[self getPrepCheckValue],@"prep",
 		nil];
+	[dict addEntriesFromDictionary:[self addAvailability]];
 	
 	[[parentWindow arrayControllerEmployees]
 	 addObject:dict];
@@ -96,6 +98,47 @@
 }
 	
 
+-(NSMutableDictionary *)addAvailability {
+	
+	availabilityTimes = [NSMutableDictionary 
+						 dictionaryWithObjectsAndKeys:
+						 [monIn stringValue],@"monIn",
+						 [monOut stringValue],@"monOut",
+						 [tueIn stringValue],@"tueIn",
+						 [tueOut stringValue],@"tueOut",
+						 [wedIn stringValue],@"wedIn",
+						 [wedOut stringValue],@"wedOut",
+						 [thuIn stringValue],@"thuIn",
+						 [thuOut stringValue],@"thuOut",
+						 [friIn stringValue],@"friIn",
+						 [friOut stringValue],@"friOut",
+						 [satIn stringValue],@"satIn",
+						 [satOut stringValue],@"satOut",
+						 [sunIn stringValue],@"sunIn",
+						 [sunOut stringValue],@"sunOut",
+						 nil];
+	
+	
+	return availabilityTimes;
+}
+
+
+- (NSString *)getPrepCheckValue {
+	NSString *result;
+	switch ([prepCheck state]) {
+		case 1:
+			result = @"TRUE";
+			break;
+		case 0:
+			result = @"FALSE";
+			break;
+
+		default:
+			break;
+	}
+	
+	return result;
+}
 
 
 @end

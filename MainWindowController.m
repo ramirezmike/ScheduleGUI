@@ -29,6 +29,10 @@ NSString *filePath;
 	[parent	showAddEmpWindow:self];
 }
 
+-(IBAction)sendCalltoShowEditEmpWindow:(id)sender {
+	[parent showEditEmpWindow:self];
+}
+
 -(IBAction) removeSelected:(id)sender {
 	[arrayControllerEmployees remove:self];
 }
@@ -81,7 +85,6 @@ NSString *filePath;
 	filePath = [[[NSBundle mainBundle] 
 				 pathForResource:@"Employees" 
 				 ofType:@"plist"]retain];
-	NSLog(@"awokefrom nib, filepath set");
 	employeeData = [[NSMutableArray alloc]init];
 	
 	if ([[NSFileManager defaultManager]
@@ -90,7 +93,6 @@ NSString *filePath;
 					initWithContentsOfFile:filePath];
 		for (id employee in empFile) {
 			[arrayControllerEmployees addObject:employee];
-			NSLog(@"Employee added");
 		}
 		[empFile release];
 	}
