@@ -5852,6 +5852,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
           <string>friIn</string>
           <string>satIn</string>
           <string>sunIn</string>
+          <string>prep</string>
         </object>
         <bool key="NSEditable">YES</bool>
         <object class="_NSManagedProxy" key="_NSManagedProxy"/>
@@ -6327,6 +6328,22 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
             </object>
           </object>
           <int key="connectionID">770</int>
+        </object>
+        <object class="IBConnectionRecord">
+          <object class="IBBindingConnection" key="connection">
+            <string key="label">value: selection.prep</string>
+            <reference key="source" ref="327657709"/>
+            <reference key="destination" ref="416372840"/>
+            <object class="NSNibBindingConnector" key="connector">
+              <reference key="NSSource" ref="327657709"/>
+              <reference key="NSDestination" ref="416372840"/>
+              <string key="NSLabel">value: selection.prep</string>
+              <string key="NSBinding">value</string>
+              <string key="NSKeyPath">selection.prep</string>
+              <int key="NSNibBindingConnectorVersion">2</int>
+            </object>
+          </object>
+          <int key="connectionID">798</int>
         </object>
       </object>
       <object class="IBMutableOrderedSet" key="objectRecords">
@@ -9590,7 +9607,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <string>{{54, 182}, {683, 485}}</string>
           <boolean value="YES"/>
-          <string>{{361, 69}, {207, 547}}</string>
+          <string>{{263, 82}, {207, 547}}</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <object class="NSAffineTransform">
@@ -10191,7 +10208,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
         </object>
       </object>
       <nil key="sourceID"/>
-      <int key="maxID">788</int>
+      <int key="maxID">798</int>
     </object>
     <object class="IBClassDescriber" key="IBDocument.Classes">
       <object class="NSMutableArray" key="referencedPartialClassDescriptions">

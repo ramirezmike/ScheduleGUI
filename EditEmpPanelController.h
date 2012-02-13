@@ -15,19 +15,33 @@
 	IBOutlet NSArrayController *arrayControllerEmployeesToEdit;
 
 	IBOutlet NSTextField *monIn;
+	IBOutlet NSPopUpButton *monInPop;
 	IBOutlet NSTextField *monOut;
+	IBOutlet NSPopUpButton *monOutPop;
 	IBOutlet NSTextField *tueIn;
+	IBOutlet NSPopUpButton *tueInPop;
 	IBOutlet NSTextField *tueOut;
+	IBOutlet NSPopUpButton *tueOutPop;
 	IBOutlet NSTextField *wedIn;
+	IBOutlet NSPopUpButton *wedInPop;
 	IBOutlet NSTextField *wedOut;
+	IBOutlet NSPopUpButton *wedOutPop;
 	IBOutlet NSTextField *thuIn;
+	IBOutlet NSPopUpButton *thuInPop;
 	IBOutlet NSTextField *thuOut;
+	IBOutlet NSPopUpButton *thuOutPop;
 	IBOutlet NSTextField *friIn;
+	IBOutlet NSPopUpButton *friInPop;
 	IBOutlet NSTextField *friOut;
+	IBOutlet NSPopUpButton *friOutPop;
 	IBOutlet NSTextField *satIn;
+	IBOutlet NSPopUpButton *satInPop;
 	IBOutlet NSTextField *satOut;
+	IBOutlet NSPopUpButton *satOutPop;
 	IBOutlet NSTextField *sunIn;
+	IBOutlet NSPopUpButton *sunInPop;
 	IBOutlet NSTextField *sunOut;
+	IBOutlet NSPopUpButton *sunOutPop;
 
 	IBOutlet id panel;
 	

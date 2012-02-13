@@ -48,7 +48,7 @@
 		[maxhTxt stringValue],@"maxHrs",
 		posValue,@"position",
 		ordrValue,@"order",
-		[self getPrepCheckValue],@"prep",
+		[NSString stringWithFormat:@"%d",[prepCheck state]],@"prep",
 		nil];
 	[dict addEntriesFromDictionary:[self addAvailability]];
 	
@@ -102,42 +102,52 @@
 	
 	availabilityTimes = [NSMutableDictionary 
 						 dictionaryWithObjectsAndKeys:
-						 [monIn stringValue],@"monIn",
-						 [monOut stringValue],@"monOut",
-						 [tueIn stringValue],@"tueIn",
-						 [tueOut stringValue],@"tueOut",
-						 [wedIn stringValue],@"wedIn",
-						 [wedOut stringValue],@"wedOut",
-						 [thuIn stringValue],@"thuIn",
-						 [thuOut stringValue],@"thuOut",
-						 [friIn stringValue],@"friIn",
-						 [friOut stringValue],@"friOut",
-						 [satIn stringValue],@"satIn",
-						 [satOut stringValue],@"satOut",
-						 [sunIn stringValue],@"sunIn",
-						 [sunOut stringValue],@"sunOut",
-						 nil];
+	 [monIn stringValue],@"monIn",
+	 [NSString stringWithFormat:@"%d",[monInPop 
+		indexOfSelectedItem]],@"monInAMPM",	
+	 [monOut stringValue],@"monOut",
+	 [NSString stringWithFormat:@"%d",[monOutPop 
+		indexOfSelectedItem]],@"monOutAMPM",	
+	 [tueIn stringValue],@"tueIn",
+	 [NSString stringWithFormat:@"%d",[tueInPop 
+		indexOfSelectedItem]],@"tueInAMPM",	
+	 [tueOut stringValue],@"tueOut",
+	 [NSString stringWithFormat:@"%d",[tueOutPop 
+		indexOfSelectedItem]],@"tueOutAMPM",	
+	 [wedIn stringValue],@"wedIn",
+	 [NSString stringWithFormat:@"%d",[wedInPop 
+		indexOfSelectedItem]],@"wedInAMPM",	
+	 [wedOut stringValue],@"wedOut",
+	 [NSString stringWithFormat:@"%d",[wedOutPop 
+		indexOfSelectedItem]],@"wedOutAMPM",	
+	 [thuIn stringValue],@"thuIn",
+	 [NSString stringWithFormat:@"%d",[thuInPop 
+		indexOfSelectedItem]],@"thuInAMPM",	
+	 [thuOut stringValue],@"thuOut",
+	 [NSString stringWithFormat:@"%d",[thuOutPop 
+		indexOfSelectedItem]],@"thuOutAMPM",	
+	 [friIn stringValue],@"friIn",
+	 [NSString stringWithFormat:@"%d",[friInPop 
+		indexOfSelectedItem]],@"friInAMPM",	
+	 [friOut stringValue],@"friOut",
+	 [NSString stringWithFormat:@"%d",[friOutPop 
+		indexOfSelectedItem]],@"friOutAMPM",	
+	 [satIn stringValue],@"satIn",
+	 [NSString stringWithFormat:@"%d",[satInPop 
+		indexOfSelectedItem]],@"satInAMPM",	
+	 [satOut stringValue],@"satOut",
+	 [NSString stringWithFormat:@"%d",[satOutPop 
+		indexOfSelectedItem]],@"satOutAMPM",	
+	 [sunIn stringValue],@"sunIn",
+	 [NSString stringWithFormat:@"%d",[sunInPop 
+		indexOfSelectedItem]],@"sunInAMPM",	
+	 [sunOut stringValue],@"sunOut",
+	 [NSString stringWithFormat:@"%d",[sunOutPop 
+		indexOfSelectedItem]],@"sunOutAMPM",	
+	 nil];
 	
 	
 	return availabilityTimes;
-}
-
-
-- (NSString *)getPrepCheckValue {
-	NSString *result;
-	switch ([prepCheck state]) {
-		case 1:
-			result = @"TRUE";
-			break;
-		case 0:
-			result = @"FALSE";
-			break;
-
-		default:
-			break;
-	}
-	
-	return result;
 }
 
 
