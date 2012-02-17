@@ -8,7 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class MainWindowController,AddEmpPanelController,EditEmpPanelController;
+@class MainWindowController,AddEmpPanelController,
+EditEmpPanelController;
 @interface ScheduleGUIAppDelegate : 
 NSObject <NSApplicationDelegate> {
 

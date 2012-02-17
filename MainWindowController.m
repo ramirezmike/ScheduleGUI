@@ -59,12 +59,12 @@ NSString *filePath;
 		case 0:
 			if ([[[obj object] stringValue] length] > 2) {
 				[[obj object]setStringValue:[[[obj object] 
-											  stringValue] substringToIndex:2]];
+						stringValue] substringToIndex:2]];
 				//keeps length of string to 2 characters
 			}
 			if ([[obj object]intValue] > 50) {
 				[[obj object]setStringValue:[[[obj object] 
-											  stringValue] substringToIndex:1]];
+						stringValue] substringToIndex:1]];
 				//keeps number value under 50
 			}
 			break;
