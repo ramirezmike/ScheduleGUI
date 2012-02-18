@@ -19,6 +19,9 @@ NSString *filePath;
 	return arrayControllerEmployees;
 }
 
+-(NSArrayController *) arrayControllerShifts {
+	return arrayControllerShifts;
+}
 
 -(void)setParent:(id)sender {
 	parent = sender;

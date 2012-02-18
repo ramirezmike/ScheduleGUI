@@ -22,6 +22,8 @@
 }
 
 -(NSArrayController *) arrayControllerEmployees;
+-(NSArrayController *) arrayControllerShifts;
+
 
 -(void)setParent:(id)sender;
 -(void)save;
