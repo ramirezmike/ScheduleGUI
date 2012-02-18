@@ -15,6 +15,7 @@
 	IBOutlet NSArrayController *arrayControllerShifts;
 	
 	IBOutlet NSTableView *tblEmployees;
+	IBOutlet NSTableView *tblMonFOH;
 	
 	NSMutableArray* employeeData;
 
@@ -27,6 +28,7 @@
 
 -(IBAction)sendCalltoShowAddEmpWindow:(id)sender;
 -(IBAction)sendCalltoShowEditEmpWindow:(id)sender;
+-(IBAction)sendCalltoShowAddShiftWindow:(id)sender;
 -(IBAction)removeSelected:(id)sender;
 
 

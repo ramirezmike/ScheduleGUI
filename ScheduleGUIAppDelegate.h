@@ -9,14 +9,16 @@
 #import <Cocoa/Cocoa.h>
 
 @class MainWindowController,AddEmpPanelController,
-EditEmpPanelController;
+EditEmpPanelController,AddShiftPanelController;
 @interface ScheduleGUIAppDelegate : 
 NSObject <NSApplicationDelegate> {
 
 @private
 	MainWindowController *mainWin;
 	AddEmpPanelController *empAddWin;
+	AddShiftPanelController *shiftAddWin;
 	EditEmpPanelController *empEditWin;
+	
 	
 
 }
@@ -24,6 +26,7 @@ NSObject <NSApplicationDelegate> {
 -(IBAction)showMainWindow:(id)sender;
 -(IBAction)showAddEmpWindow:(id)sender;
 -(IBAction)showEditEmpWindow:(id)sender;
+-(IBAction)showAddShiftWindow:(id)sender;
 -(IBAction)saveCalltoEverything:(id)sender;
 
 @end

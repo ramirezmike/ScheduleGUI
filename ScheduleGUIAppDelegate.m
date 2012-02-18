@@ -10,9 +10,10 @@
 #import "MainWindowController.h"
 #import "AddEmpPanelController.h"
 #import "EditEmpPanelController.h"
+#import "AddShiftPanelController.h"
 
 @class MainWindowController,AddEmpPanelController,
-	EditEmpPanelController;
+	EditEmpPanelController,AddShiftPanelController;
 @implementation ScheduleGUIAppDelegate
 
 -(void) awakeFromNib {
@@ -46,7 +47,15 @@
 	[empEditWin showInWindow:[NSApp mainWindow]];
 }
 
-
+-(IBAction) showAddShiftWindow:(id)sender {
+	if (!shiftAddWin) {
+		shiftAddWin = [[AddShiftPanelController alloc]init];
+	}
+	
+	[shiftAddWin setParent:sender];
+	[shiftAddWin showInWindow:[NSApp mainWindow]];
+}
+	
 
 -(IBAction)saveCalltoEverything:(id)sender {
 	[mainWin save];

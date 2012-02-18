@@ -12,7 +12,7 @@
     </object>
     <object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
       <bool key="EncodedWithXMLCoder">YES</bool>
-      <integer value="379"/>
+      <integer value="409"/>
       <integer value="336"/>
     </object>
     <object class="NSArray" key="IBDocument.PluginDependencies">
@@ -151,7 +151,7 @@
                 <object class="NSTabViewItem" id="333672228">
                   <string key="NSIdentifier">1</string>
                   <object class="NSView" key="NSView" id="834002166">
-                    <reference key="NSNextResponder" ref="276055497"/>
+                    <nil key="NSNextResponder"/>
                     <int key="NSvFlags">256</int>
                     <object class="NSMutableArray" key="NSSubviews">
                       <bool key="EncodedWithXMLCoder">YES</bool>
@@ -684,7 +684,6 @@
                       </object>
                     </object>
                     <string key="NSFrame">{{10, 33}, {679, 444}}</string>
-                    <reference key="NSSuperview" ref="276055497"/>
                     <string key="NSReuseIdentifierKey">_NS:561</string>
                   </object>
                   <string key="NSLabel">Employees</string>
@@ -699,7 +698,7 @@
                 <object class="NSTabViewItem" id="16369268">
                   <string key="NSIdentifier">2</string>
                   <object class="NSView" key="NSView" id="649419719">
-                    <nil key="NSNextResponder"/>
+                    <reference key="NSNextResponder" ref="276055497"/>
                     <int key="NSvFlags">256</int>
                     <object class="NSMutableArray" key="NSSubviews">
                       <bool key="EncodedWithXMLCoder">YES</bool>
@@ -4811,6 +4810,7 @@
                       </object>
                     </object>
                     <string key="NSFrame">{{10, 33}, {679, 444}}</string>
+                    <reference key="NSSuperview" ref="276055497"/>
                     <string key="NSReuseIdentifierKey">_NS:571</string>
                   </object>
                   <string key="NSLabel">Days</string>
@@ -4829,14 +4829,14 @@
                   <reference key="NSTabView" ref="276055497"/>
                 </object>
               </object>
-              <reference key="NSSelectedTabViewItem" ref="333672228"/>
+              <reference key="NSSelectedTabViewItem" ref="16369268"/>
               <reference key="NSFont" ref="1059030236"/>
               <int key="NSTvFlags">0</int>
               <bool key="NSAllowTruncatedLabels">YES</bool>
               <bool key="NSDrawsBackground">YES</bool>
               <object class="NSMutableArray" key="NSSubviews">
                 <bool key="EncodedWithXMLCoder">YES</bool>
-                <reference ref="834002166"/>
+                <reference ref="649419719"/>
               </object>
             </object>
           </object>
@@ -6344,6 +6344,22 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
             </object>
           </object>
           <int key="connectionID">798</int>
+        </object>
+        <object class="IBConnectionRecord">
+          <object class="IBOutletConnection" key="connection">
+            <string key="label">tblMonFOH</string>
+            <reference key="source" ref="1001"/>
+            <reference key="destination" ref="1003136506"/>
+          </object>
+          <int key="connectionID">799</int>
+        </object>
+        <object class="IBConnectionRecord">
+          <object class="IBActionConnection" key="connection">
+            <string key="label">sendCalltoShowAddShiftWindow:</string>
+            <reference key="source" ref="1001"/>
+            <reference key="destination" ref="771573961"/>
+          </object>
+          <int key="connectionID">800</int>
         </object>
       </object>
       <object class="IBMutableOrderedSet" key="objectRecords">
@@ -9603,11 +9619,11 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
         </object>
         <object class="NSMutableArray" key="dict.values">
           <bool key="EncodedWithXMLCoder">YES</bool>
-          <string>{{54, 182}, {683, 485}}</string>
+          <string>{{-1124, 256}, {683, 485}}</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-          <string>{{54, 182}, {683, 485}}</string>
+          <string>{{-1124, 256}, {683, 485}}</string>
           <boolean value="YES"/>
-          <string>{{263, 82}, {207, 547}}</string>
+          <string>{{-567, 117}, {207, 547}}</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <object class="NSAffineTransform">
@@ -10208,7 +10224,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
         </object>
       </object>
       <nil key="sourceID"/>
-      <int key="maxID">798</int>
+      <int key="maxID">800</int>
     </object>
     <object class="IBClassDescriber" key="IBDocument.Classes">
       <object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -10222,11 +10238,13 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <bool key="EncodedWithXMLCoder">YES</bool>
               <string>removeSelected:</string>
               <string>sendCalltoShowAddEmpWindow:</string>
+              <string>sendCalltoShowAddShiftWindow:</string>
               <string>sendCalltoShowEditEmpWindow:</string>
               <string>setParent:</string>
             </object>
             <object class="NSMutableArray" key="dict.values">
               <bool key="EncodedWithXMLCoder">YES</bool>
+              <string>id</string>
               <string>id</string>
               <string>id</string>
               <string>id</string>
@@ -10239,6 +10257,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <bool key="EncodedWithXMLCoder">YES</bool>
               <string>removeSelected:</string>
               <string>sendCalltoShowAddEmpWindow:</string>
+              <string>sendCalltoShowAddShiftWindow:</string>
               <string>sendCalltoShowEditEmpWindow:</string>
               <string>setParent:</string>
             </object>
@@ -10250,6 +10269,10 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               </object>
               <object class="IBActionInfo">
                 <string key="name">sendCalltoShowAddEmpWindow:</string>
+                <string key="candidateClassName">id</string>
+              </object>
+              <object class="IBActionInfo">
+                <string key="name">sendCalltoShowAddShiftWindow:</string>
                 <string key="candidateClassName">id</string>
               </object>
               <object class="IBActionInfo">
@@ -10270,12 +10293,14 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <string>arrayControllerShifts</string>
               <string>parent</string>
               <string>tblEmployees</string>
+              <string>tblMonFOH</string>
             </object>
             <object class="NSMutableArray" key="dict.values">
               <bool key="EncodedWithXMLCoder">YES</bool>
               <string>NSArrayController</string>
               <string>NSArrayController</string>
               <string>id</string>
+              <string>NSTableView</string>
               <string>NSTableView</string>
             </object>
           </object>
@@ -10287,6 +10312,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <string>arrayControllerShifts</string>
               <string>parent</string>
               <string>tblEmployees</string>
+              <string>tblMonFOH</string>
             </object>
             <object class="NSMutableArray" key="dict.values">
               <bool key="EncodedWithXMLCoder">YES</bool>
@@ -10304,6 +10330,10 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               </object>
               <object class="IBToOneOutletInfo">
                 <string key="name">tblEmployees</string>
+                <string key="candidateClassName">NSTableView</string>
+              </object>
+              <object class="IBToOneOutletInfo">
+                <string key="name">tblMonFOH</string>
                 <string key="candidateClassName">NSTableView</string>
               </object>
             </object>

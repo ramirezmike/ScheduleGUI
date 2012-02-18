@@ -9,6 +9,7 @@
 #import "ScheduleGUIAppDelegate.h"
 #import "AddEmpPanelController.h"
 
+
 @implementation MainWindowController
 @synthesize employeeData;
 NSString *filePath;
@@ -31,6 +32,10 @@ NSString *filePath;
 
 -(IBAction)sendCalltoShowEditEmpWindow:(id)sender {
 	[parent showEditEmpWindow:self];
+}
+
+-(IBAction)sendCalltoShowAddShiftWindow:(id)sender {
+	[parent showAddShiftWindow:self];
 }
 
 -(IBAction) removeSelected:(id)sender {
