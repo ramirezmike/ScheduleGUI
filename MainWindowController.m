@@ -11,8 +11,9 @@
 
 
 @implementation MainWindowController
-@synthesize employeeData;
+@synthesize employeeData,shiftData;
 NSString *filePath;
+NSString *filePathShift;
 
 
 -(NSArrayController *) arrayControllerEmployees {
@@ -93,7 +94,12 @@ NSString *filePath;
 	filePath = [[[NSBundle mainBundle] 
 				 pathForResource:@"Employees" 
 				 ofType:@"plist"]retain];
+	filePathShift = [[[NSBundle mainBundle]
+					  pathForResource:@"Shifts"
+					  ofType:@"plist"]retain];
+
 	employeeData = [[NSMutableArray alloc]init];
+	shiftData = [[NSMutableArray alloc]init];
 	
 	if ([[NSFileManager defaultManager]
 		 fileExistsAtPath:filePath]) {
@@ -104,6 +110,26 @@ NSString *filePath;
 		}
 		[empFile release];
 	}
+	if (![[NSFileManager defaultManager]
+		 fileExistsAtPath:filePathShift]) {
+		[[NSFileManager defaultManager]
+		 createFileAtPath:filePathShift 
+		 contents:nil attributes:nil];
+	}
+		NSMutableArray *empFile = [[NSMutableArray alloc]
+						initWithContentsOfFile:filePath];
+		for (id employee in empFile) {
+			[arrayControllerEmployees addObject:employee];
+		}
+		[empFile release];
+		NSMutableArray *shiftFile = [[NSMutableArray alloc]
+					initWithContentsOfFile:filePathShift];
+	for (id shift in shiftFile) {
+		[arrayControllerShifts addObject:shift];
+	}
+	[shiftFile release];
+	
+
 }
 
 @end

@@ -18,7 +18,7 @@
 	IBOutlet NSTableView *tblMonFOH;
 	
 	NSMutableArray* employeeData;
-
+	NSMutableArray* shiftData;
 }
 
 -(NSArrayController *) arrayControllerEmployees;
@@ -35,5 +35,6 @@
 
 
 @property (copy) NSArray* employeeData;
+@property (copy) NSArray* shiftData;
 
 @end

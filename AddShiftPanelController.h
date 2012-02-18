@@ -11,6 +11,10 @@
 	id parentWindow;
 	
 	IBOutlet id panel;
+	
+	IBOutlet NSTextField *timeIn;
+	IBOutlet NSTextField *timeOut;
+	IBOutlet NSPopUpButton *positionPop;
 }
 
 -(void)showInWindow:(NSWindow *)window;

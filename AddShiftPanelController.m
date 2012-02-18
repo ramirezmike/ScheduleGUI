@@ -33,6 +33,18 @@
 }
 
 -(IBAction)addShift:(id)sender {
+	NSString* posPopValue = [NSString 
+	stringWithFormat:@"%d",
+	[positionPop indexOfSelectedItem]];
+	
+	NSMutableDictionary *dict = [NSMutableDictionary
+		dictionaryWithObjectsAndKeys:
+		[timeIn stringValue],@"timeIn",
+		[timeOut stringValue],@"timeOut",
+		posPopValue,@"position",
+								 nil];
+	[[parentWindow arrayControllerShifts]addObject:dict];
+	[self closeWindow:nil];
 }
 
 @end
