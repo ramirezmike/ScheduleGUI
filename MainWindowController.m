@@ -39,7 +39,7 @@ NSString *filePathShift;
 }
 
 -(IBAction)sendCalltoShowAddShiftWindow:(id)sender {
-	[parent showAddShiftWindow:self];
+	[parent showAddShiftWindow:self withController:arrayControllerShifts];
 }
 
 -(IBAction) removeSelected:(id)sender {

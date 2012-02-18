@@ -11,11 +11,14 @@
 
 @implementation AddShiftPanelController
 
--(void)showInWindow:(NSWindow *)window {
+-(void)showInWindow:(NSWindow *)window 
+	 withController: (NSArrayController *) controller {
 	if (!panel) {
 		[NSBundle loadNibNamed:@"AddShiftPanel" owner:self];
 	}
 	
+	controllerHolder = controller;
+		
 	[NSApp beginSheet:panel
 	   modalForWindow:window
 		modalDelegate: nil
@@ -43,8 +46,11 @@
 		[timeOut stringValue],@"timeOut",
 		posPopValue,@"position",
 								 nil];
-	[[parentWindow arrayControllerShifts]addObject:dict];
+	[controllerHolder addObject:dict];
 	[self closeWindow:nil];
 }
+
+
+
 
 @end

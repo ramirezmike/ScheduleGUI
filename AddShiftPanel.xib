@@ -47,6 +47,7 @@
         <string key="NSWindowClass">NSPanel</string>
         <nil key="NSViewClass"/>
         <nil key="NSUserInterfaceItemIdentifier"/>
+        <string key="NSWindowContentMaxSize">{1.7976931348623157e+308, 1.7976931348623157e+308}</string>
         <object class="NSView" key="NSWindowView" id="211338317">
           <reference key="NSNextResponder"/>
           <int key="NSvFlags">256</int>
@@ -285,14 +286,6 @@
           <int key="connectionID">5</int>
         </object>
         <object class="IBConnectionRecord">
-          <object class="IBActionConnection" key="connection">
-            <string key="label">addShift:</string>
-            <reference key="source" ref="1001"/>
-            <reference key="destination" ref="669092854"/>
-          </object>
-          <int key="connectionID">25</int>
-        </object>
-        <object class="IBConnectionRecord">
           <object class="IBOutletConnection" key="connection">
             <string key="label">timeOut</string>
             <reference key="source" ref="1001"/>
@@ -315,6 +308,14 @@
             <reference key="destination" ref="520999833"/>
           </object>
           <int key="connectionID">28</int>
+        </object>
+        <object class="IBConnectionRecord">
+          <object class="IBActionConnection" key="connection">
+            <string key="label">addShift:</string>
+            <reference key="source" ref="1001"/>
+            <reference key="destination" ref="669092854"/>
+          </object>
+          <int key="connectionID">29</int>
         </object>
       </object>
       <object class="IBMutableOrderedSet" key="objectRecords">
@@ -555,9 +556,9 @@
             <bytes key="NSTransformStruct">P4AAAL+AAABBoAAAwycAAA</bytes>
           </object>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-          <string>{{-970, 503}, {136, 265}}</string>
+          <string>{{0, 497}, {136, 265}}</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-          <string>{{-970, 503}, {136, 265}}</string>
+          <string>{{0, 497}, {136, 265}}</string>
           <boolean value="NO"/>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -587,7 +588,7 @@
         </object>
       </object>
       <nil key="sourceID"/>
-      <int key="maxID">28</int>
+      <int key="maxID">29</int>
     </object>
     <object class="IBClassDescriber" key="IBDocument.Classes">
       <object class="NSMutableArray" key="referencedPartialClassDescriptions">

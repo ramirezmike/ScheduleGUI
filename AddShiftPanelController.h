@@ -15,12 +15,14 @@
 	IBOutlet NSTextField *timeIn;
 	IBOutlet NSTextField *timeOut;
 	IBOutlet NSPopUpButton *positionPop;
+	
+	NSArrayController *controllerHolder;
 }
 
--(void)showInWindow:(NSWindow *)window;
+-(void)showInWindow:(NSWindow *)window 
+withController: (NSArrayController *) controller;
 -(IBAction)closeWindow:(id)sender;
 -(IBAction)addShift:(id)sender;
 -(void)setParent:(id)sender;
-
 
 @end

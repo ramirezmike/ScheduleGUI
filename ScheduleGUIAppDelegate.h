@@ -23,10 +23,13 @@ NSObject <NSApplicationDelegate> {
 
 }
 
+
+//these should all be "void"
 -(IBAction)showMainWindow:(id)sender;
 -(IBAction)showAddEmpWindow:(id)sender;
 -(IBAction)showEditEmpWindow:(id)sender;
--(IBAction)showAddShiftWindow:(id)sender;
+-(void)showAddShiftWindow:(id)sender 
+withController:(NSArrayController *) controller;
 -(IBAction)saveCalltoEverything:(id)sender;
 
 @end

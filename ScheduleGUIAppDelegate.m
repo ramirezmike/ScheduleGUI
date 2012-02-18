@@ -47,13 +47,15 @@
 	[empEditWin showInWindow:[NSApp mainWindow]];
 }
 
--(IBAction) showAddShiftWindow:(id)sender {
+-(void)showAddShiftWindow:(id)sender 
+withController:(NSArrayController *) controller {
 	if (!shiftAddWin) {
 		shiftAddWin = [[AddShiftPanelController alloc]init];
 	}
 	
 	[shiftAddWin setParent:sender];
-	[shiftAddWin showInWindow:[NSApp mainWindow]];
+	[shiftAddWin showInWindow:[NSApp mainWindow] 
+			   withController:controller];
 }
 	
 
