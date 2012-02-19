@@ -53,25 +53,89 @@ NSString *filePathShift;
 -(IBAction)selectDayForShiftTable:(id)sender {
 	switch ([daySelection selectedRow]) {
 		case 0:
-			[arrayControllerShifts setContent:monFShiftData];
+			switch ([houseSelection selectedRow]) {
+				case 0:
+				[arrayControllerShifts setContent:monFShiftData];
+					break;
+				case 1:
+				[arrayControllerShifts setContent:monBShiftData];
+					break;
+				default:
+					break;
+			}
+
 			break;
 		case 1:
-			[arrayControllerShifts setContent:tueFShiftData];
+			switch ([houseSelection selectedRow]) {
+				case 0:
+				[arrayControllerShifts setContent:tueFShiftData];
+					break;
+				case 1:
+				[arrayControllerShifts setContent:tueBShiftData];
+					break;
+				default:
+					break;
+			}
 			break;
 		case 2:
-			[arrayControllerShifts setContent:wedFShiftData];
+			switch ([houseSelection selectedRow]) {
+				case 0:
+				[arrayControllerShifts setContent:wedFShiftData];
+					break;
+				case 1:
+				[arrayControllerShifts setContent:wedBShiftData];
+					break;
+				default:
+					break;
+			}
 			break;
 		case 3:
-			[arrayControllerShifts setContent:thuFShiftData];
+			switch ([houseSelection selectedRow]) {
+				case 0:
+				[arrayControllerShifts setContent:thuFShiftData];
+					break;
+				case 1:
+				[arrayControllerShifts setContent:thuBShiftData];
+					break;
+				default:
+					break;
+			}
 			break;
 		case 4:
-			[arrayControllerShifts setContent:friFShiftData];
+			switch ([houseSelection selectedRow]) {
+				case 0:
+				[arrayControllerShifts setContent:friFShiftData];
+					break;
+				case 1:
+				[arrayControllerShifts setContent:friBShiftData];
+					break;
+				default:
+					break;
+			}
 			break;
 		case 5:
-			[arrayControllerShifts setContent:satFShiftData];
+			switch ([houseSelection selectedRow]) {
+				case 0:
+				[arrayControllerShifts setContent:satFShiftData];
+					break;
+				case 1:
+				[arrayControllerShifts setContent:satBShiftData];
+					break;
+				default:
+					break;
+			}
 			break;
 		case 6:
-			[arrayControllerShifts setContent:sunFShiftData];
+			switch ([houseSelection selectedRow]) {
+				case 0:
+				[arrayControllerShifts setContent:sunFShiftData];
+					break;
+				case 1:
+				[arrayControllerShifts setContent:sunBShiftData];
+					break;
+				default:
+					break;
+			}
 			break;
 		default:
 			break;

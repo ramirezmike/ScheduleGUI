@@ -16,6 +16,7 @@
 	
 	IBOutlet NSTableView *tblEmployees;
 	IBOutlet NSMatrix *daySelection;
+	IBOutlet NSMatrix *houseSelection;
  
 	
 	NSMutableArray* employeeData;
