@@ -15,12 +15,25 @@
 	IBOutlet NSArrayController *arrayControllerShifts;
 	
 	IBOutlet NSTableView *tblEmployees;
-	IBOutlet NSTableView *tblMonFOH;
+	IBOutlet NSMatrix *daySelection;
+ 
 	
 	NSMutableArray* employeeData;
 	NSMutableArray* monFShiftData;
 	NSMutableArray* monBShiftData;
-
+	NSMutableArray* tueFShiftData;
+	NSMutableArray* tueBShiftData;
+	NSMutableArray* wedFShiftData;
+	NSMutableArray* wedBShiftData;
+	NSMutableArray* thuFShiftData;
+	NSMutableArray* thuBShiftData;
+	NSMutableArray* friFShiftData;
+	NSMutableArray* friBShiftData;
+	NSMutableArray* satFShiftData;
+	NSMutableArray* satBShiftData;
+	NSMutableArray* sunFShiftData;
+	NSMutableArray* sunBShiftData;
+	
 }
 
 -(NSArrayController *) arrayControllerEmployees;
@@ -34,10 +47,22 @@
 -(IBAction)sendCalltoShowEditEmpWindow:(id)sender;
 -(IBAction)sendCalltoShowAddShiftWindow:(id)sender;
 -(IBAction)removeSelected:(id)sender;
-
+-(IBAction)selectDayForShiftTable:(id)sender;
 
 @property (copy) NSArray* employeeData;
 @property (copy) NSArray* monFShiftData;
 @property (copy) NSArray* monBShiftData;
+@property (copy) NSArray* tueFShiftData;
+@property (copy) NSArray* tueBShiftData;
+@property (copy) NSArray* wedFShiftData;
+@property (copy) NSArray* wedBShiftData;
+@property (copy) NSArray* thuFShiftData;
+@property (copy) NSArray* thuBShiftData;
+@property (copy) NSArray* friFShiftData;
+@property (copy) NSArray* friBShiftData;
+@property (copy) NSArray* satFShiftData;
+@property (copy) NSArray* satBShiftData;
+@property (copy) NSArray* sunFShiftData;
+@property (copy) NSArray* sunBShiftData;
 
 @end

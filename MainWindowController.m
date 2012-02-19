@@ -11,7 +11,11 @@
 
 
 @implementation MainWindowController
-@synthesize employeeData,monFShiftData,monBShiftData;
+@synthesize employeeData,monFShiftData,monBShiftData,tueFShiftData,tueBShiftData,
+wedFShiftData,wedBShiftData,thuFShiftData,thuBShiftData,friFShiftData,
+friBShiftData,satFShiftData,satBShiftData,sunFShiftData,sunBShiftData;
+
+
 NSString *filePath;
 NSString *filePathShift;
 
@@ -39,21 +43,39 @@ NSString *filePathShift;
 }
 
 -(IBAction)sendCalltoShowAddShiftWindow:(id)sender {
-	switch ([sender tag]) {
-		case 0:
-			[arrayControllerShifts setContent:monFShiftData];
-			break;
-		case 1:
-			[arrayControllerShifts setContent:monBShiftData];
-			break;
-		default:
-			break;
-	}
 	[parent showAddShiftWindow:self withController:arrayControllerShifts];	
 }
 
 -(IBAction) removeSelected:(id)sender {
 	[arrayControllerEmployees remove:self];
+}
+
+-(IBAction)selectDayForShiftTable:(id)sender {
+	switch ([daySelection selectedRow]) {
+		case 0:
+			[arrayControllerShifts setContent:monFShiftData];
+			break;
+		case 1:
+			[arrayControllerShifts setContent:tueFShiftData];
+			break;
+		case 2:
+			[arrayControllerShifts setContent:wedFShiftData];
+			break;
+		case 3:
+			[arrayControllerShifts setContent:thuFShiftData];
+			break;
+		case 4:
+			[arrayControllerShifts setContent:friFShiftData];
+			break;
+		case 5:
+			[arrayControllerShifts setContent:satFShiftData];
+			break;
+		case 6:
+			[arrayControllerShifts setContent:sunFShiftData];
+			break;
+		default:
+			break;
+	}
 }
 
 
@@ -111,7 +133,18 @@ NSString *filePathShift;
 	employeeData = [[NSMutableArray alloc]init];
 	monFShiftData = [[NSMutableArray alloc]init];
 	monBShiftData = [[NSMutableArray alloc]init];
-
+	tueFShiftData = [[NSMutableArray alloc]init];
+	tueBShiftData = [[NSMutableArray alloc]init];
+	wedFShiftData = [[NSMutableArray alloc]init];
+	wedBShiftData = [[NSMutableArray alloc]init];
+	thuFShiftData = [[NSMutableArray alloc]init];
+	thuBShiftData = [[NSMutableArray alloc]init];
+	friFShiftData = [[NSMutableArray alloc]init];
+	friBShiftData = [[NSMutableArray alloc]init];
+	satFShiftData = [[NSMutableArray alloc]init];
+	satBShiftData = [[NSMutableArray alloc]init];
+	sunFShiftData = [[NSMutableArray alloc]init];
+	sunBShiftData = [[NSMutableArray alloc]init];
 	
 	if ([[NSFileManager defaultManager]
 		 fileExistsAtPath:filePath]) {
