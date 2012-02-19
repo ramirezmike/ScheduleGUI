@@ -50,6 +50,9 @@ NSString *filePathShift;
 	[arrayControllerEmployees remove:self];
 }
 
+-(IBAction) removeShift:(id)sender {
+}
+
 -(IBAction)selectDayForShiftTable:(id)sender {
 	switch ([daySelection selectedRow]) {
 		case 0:
@@ -238,6 +241,7 @@ NSString *filePathShift;
 	}
 	[shiftFile release];
 	
+	[arrayControllerShifts setContent:monFShiftData];
 
 }
 

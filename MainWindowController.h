@@ -48,6 +48,7 @@
 -(IBAction)sendCalltoShowEditEmpWindow:(id)sender;
 -(IBAction)sendCalltoShowAddShiftWindow:(id)sender;
 -(IBAction)removeSelected:(id)sender;
+-(IBAction) removeShift:(id)sender; 
 -(IBAction)selectDayForShiftTable:(id)sender;
 
 @property (copy) NSArray* employeeData;
