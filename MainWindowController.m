@@ -11,7 +11,7 @@
 
 
 @implementation MainWindowController
-@synthesize employeeData,shiftData;
+@synthesize employeeData,monFShiftData,monBShiftData;
 NSString *filePath;
 NSString *filePathShift;
 
@@ -39,7 +39,17 @@ NSString *filePathShift;
 }
 
 -(IBAction)sendCalltoShowAddShiftWindow:(id)sender {
-	[parent showAddShiftWindow:self withController:arrayControllerShifts];
+	switch ([sender tag]) {
+		case 0:
+			[arrayControllerShifts setContent:monFShiftData];
+			break;
+		case 1:
+			[arrayControllerShifts setContent:monBShiftData];
+			break;
+		default:
+			break;
+	}
+	[parent showAddShiftWindow:self withController:arrayControllerShifts];	
 }
 
 -(IBAction) removeSelected:(id)sender {
@@ -99,7 +109,9 @@ NSString *filePathShift;
 					  ofType:@"plist"]retain];
 
 	employeeData = [[NSMutableArray alloc]init];
-	shiftData = [[NSMutableArray alloc]init];
+	monFShiftData = [[NSMutableArray alloc]init];
+	monBShiftData = [[NSMutableArray alloc]init];
+
 	
 	if ([[NSFileManager defaultManager]
 		 fileExistsAtPath:filePath]) {

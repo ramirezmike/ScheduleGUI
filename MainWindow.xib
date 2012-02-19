@@ -13,7 +13,7 @@
     <object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
       <bool key="EncodedWithXMLCoder">YES</bool>
       <integer value="336"/>
-      <integer value="379"/>
+      <integer value="421"/>
     </object>
     <object class="NSArray" key="IBDocument.PluginDependencies">
       <bool key="EncodedWithXMLCoder">YES</bool>
@@ -151,7 +151,7 @@
                 <object class="NSTabViewItem" id="333672228">
                   <string key="NSIdentifier">1</string>
                   <object class="NSView" key="NSView" id="834002166">
-                    <reference key="NSNextResponder" ref="276055497"/>
+                    <nil key="NSNextResponder"/>
                     <int key="NSvFlags">256</int>
                     <object class="NSMutableArray" key="NSSubviews">
                       <bool key="EncodedWithXMLCoder">YES</bool>
@@ -684,7 +684,6 @@
                       </object>
                     </object>
                     <string key="NSFrame">{{10, 33}, {679, 444}}</string>
-                    <reference key="NSSuperview" ref="276055497"/>
                     <string key="NSReuseIdentifierKey">_NS:561</string>
                   </object>
                   <string key="NSLabel">Employees</string>
@@ -699,7 +698,7 @@
                 <object class="NSTabViewItem" id="16369268">
                   <string key="NSIdentifier">2</string>
                   <object class="NSView" key="NSView" id="649419719">
-                    <nil key="NSNextResponder"/>
+                    <reference key="NSNextResponder" ref="276055497"/>
                     <int key="NSvFlags">256</int>
                     <object class="NSMutableArray" key="NSSubviews">
                       <bool key="EncodedWithXMLCoder">YES</bool>
@@ -977,6 +976,7 @@
                                   <string key="NSFrame">{{34, 14}, {96, 32}}</string>
                                   <reference key="NSSuperview" ref="837039046"/>
                                   <string key="NSReuseIdentifierKey">_NS:610</string>
+                                  <int key="NSTag">1</int>
                                   <bool key="NSEnabled">YES</bool>
                                   <object class="NSButtonCell" key="NSCell" id="313881228">
                                     <int key="NSCellFlags">67239424</int>
@@ -4810,6 +4810,7 @@
                       </object>
                     </object>
                     <string key="NSFrame">{{10, 33}, {679, 444}}</string>
+                    <reference key="NSSuperview" ref="276055497"/>
                     <string key="NSReuseIdentifierKey">_NS:571</string>
                   </object>
                   <string key="NSLabel">Days</string>
@@ -4828,14 +4829,14 @@
                   <reference key="NSTabView" ref="276055497"/>
                 </object>
               </object>
-              <reference key="NSSelectedTabViewItem" ref="333672228"/>
+              <reference key="NSSelectedTabViewItem" ref="16369268"/>
               <reference key="NSFont" ref="1059030236"/>
               <int key="NSTvFlags">0</int>
               <bool key="NSAllowTruncatedLabels">YES</bool>
               <bool key="NSDrawsBackground">YES</bool>
               <object class="NSMutableArray" key="NSSubviews">
                 <bool key="EncodedWithXMLCoder">YES</bool>
-                <reference ref="834002166"/>
+                <reference ref="649419719"/>
               </object>
             </object>
           </object>
@@ -6366,22 +6367,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
         </object>
         <object class="IBConnectionRecord">
           <object class="IBBindingConnection" key="connection">
-            <string key="label">contentArray: shiftData</string>
-            <reference key="source" ref="372873124"/>
-            <reference key="destination" ref="1001"/>
-            <object class="NSNibBindingConnector" key="connector">
-              <reference key="NSSource" ref="372873124"/>
-              <reference key="NSDestination" ref="1001"/>
-              <string key="NSLabel">contentArray: shiftData</string>
-              <string key="NSBinding">contentArray</string>
-              <string key="NSKeyPath">shiftData</string>
-              <int key="NSNibBindingConnectorVersion">2</int>
-            </object>
-          </object>
-          <int key="connectionID">804</int>
-        </object>
-        <object class="IBConnectionRecord">
-          <object class="IBBindingConnection" key="connection">
             <string key="label">value: arrangedObjects.position</string>
             <reference key="source" ref="500088118"/>
             <reference key="destination" ref="372873124"/>
@@ -6443,6 +6428,14 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
             <reference key="destination" ref="372873124"/>
           </object>
           <int key="connectionID">814</int>
+        </object>
+        <object class="IBConnectionRecord">
+          <object class="IBActionConnection" key="connection">
+            <string key="label">sendCalltoShowAddShiftWindow:</string>
+            <reference key="source" ref="1001"/>
+            <reference key="destination" ref="996137605"/>
+          </object>
+          <int key="connectionID">815</int>
         </object>
       </object>
       <object class="IBMutableOrderedSet" key="objectRecords">
@@ -9710,11 +9703,11 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
         </object>
         <object class="NSMutableArray" key="dict.values">
           <bool key="EncodedWithXMLCoder">YES</bool>
-          <string>{{-1147, 295}, {683, 485}}</string>
+          <string>{{-1041, 298}, {683, 485}}</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-          <string>{{-1147, 295}, {683, 485}}</string>
+          <string>{{-1041, 298}, {683, 485}}</string>
           <boolean value="YES"/>
-          <string>{{-560, 306}, {207, 547}}</string>
+          <string>{{-269, 250}, {207, 547}}</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <object class="NSAffineTransform">
@@ -10316,7 +10309,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
         </object>
       </object>
       <nil key="sourceID"/>
-      <int key="maxID">814</int>
+      <int key="maxID">815</int>
     </object>
     <object class="IBClassDescriber" key="IBDocument.Classes">
       <object class="NSMutableArray" key="referencedPartialClassDescriptions">
