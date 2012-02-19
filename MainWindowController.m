@@ -51,6 +51,7 @@ NSString *filePathShift;
 }
 
 -(IBAction) removeShift:(id)sender {
+	[arrayControllerShifts remove:self];
 }
 
 -(IBAction)selectDayForShiftTable:(id)sender {
