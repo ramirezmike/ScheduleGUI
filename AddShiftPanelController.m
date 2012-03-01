@@ -40,12 +40,22 @@
 	stringWithFormat:@"%d",
 	[positionPop indexOfSelectedItem]];
 	
+	NSString* timeInPopValue = [NSString 
+		 stringWithFormat:@"%d",
+		 [timeInPop indexOfSelectedItem]];
+
+	NSString* timeOutPopValue = [NSString 
+		 stringWithFormat:@"%d",
+		 [timeOutPop indexOfSelectedItem]];
+
 	NSMutableDictionary *dict = [NSMutableDictionary
 		dictionaryWithObjectsAndKeys:
 		[timeIn stringValue],@"timeIn",
 		[timeOut stringValue],@"timeOut",
 		posPopValue,@"position",
-								 nil];
+		timeInPopValue,@"timeInPop",
+		timeOutPopValue,@"timeOutPop",
+					 nil];
 	[controllerHolder addObject:dict];
 	[self closeWindow:nil];
 }

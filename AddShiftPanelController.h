@@ -15,6 +15,8 @@
 	IBOutlet NSTextField *timeIn;
 	IBOutlet NSTextField *timeOut;
 	IBOutlet NSPopUpButton *positionPop;
+	IBOutlet NSPopUpButton *timeInPop;
+	IBOutlet NSPopUpButton *timeOutPop;
 	
 	NSArrayController *controllerHolder;
 }
