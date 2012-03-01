@@ -229,12 +229,6 @@ NSString *filePathShift;
 		 createFileAtPath:filePathShift 
 		 contents:nil attributes:nil];
 	}
-		NSMutableArray *empFile = [[NSMutableArray alloc]
-						initWithContentsOfFile:filePath];
-		for (id employee in empFile) {
-			[arrayControllerEmployees addObject:employee];
-		}
-		[empFile release];
 		NSMutableArray *shiftFile = [[NSMutableArray alloc]
 					initWithContentsOfFile:filePathShift];
 	for (id shift in shiftFile) {
