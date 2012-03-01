@@ -156,6 +156,16 @@ NSString *filePathShift;
 			[[arrayControllerEmployees arrangedObjects] 
 			 writeToFile:filePath atomically:YES];
 		}
+	
+	[arrayControllerShifts setContent:monFShiftData];
+	if (![[NSFileManager defaultManager] 
+		  fileExistsAtPath:filePathShift] 
+		|| [[NSFileManager defaultManager]
+			isWritableFileAtPath:filePathShift]) {
+			
+			[[arrayControllerShifts arrangedObjects] 
+			 writeToFile:filePathShift atomically:YES];
+		}
 }
 
 
@@ -223,21 +233,18 @@ NSString *filePathShift;
 		}
 		[empFile release];
 	}
-	if (![[NSFileManager defaultManager]
+	if ([[NSFileManager defaultManager]
 		 fileExistsAtPath:filePathShift]) {
-		[[NSFileManager defaultManager]
-		 createFileAtPath:filePathShift 
-		 contents:nil attributes:nil];
-	}
 		NSMutableArray *shiftFile = [[NSMutableArray alloc]
 					initWithContentsOfFile:filePathShift];
 	for (id shift in shiftFile) {
-		[arrayControllerShifts addObject:shift];
+		[monFShiftData addObject:shift];
 	}
 	[shiftFile release];
 	
 	[arrayControllerShifts setContent:monFShiftData];
 
+	}
 }
 
 @end

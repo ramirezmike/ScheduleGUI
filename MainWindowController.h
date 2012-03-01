@@ -13,12 +13,12 @@
 	
 	IBOutlet NSArrayController *arrayControllerEmployees;
 	IBOutlet NSArrayController *arrayControllerShifts;
+
 	
 	IBOutlet NSTableView *tblEmployees;
 	IBOutlet NSMatrix *daySelection;
 	IBOutlet NSMatrix *houseSelection;
  
-	
 	NSMutableArray* employeeData;
 	NSMutableArray* monFShiftData;
 	NSMutableArray* monBShiftData;
@@ -34,7 +34,7 @@
 	NSMutableArray* satBShiftData;
 	NSMutableArray* sunFShiftData;
 	NSMutableArray* sunBShiftData;
-	
+		
 }
 
 -(NSArrayController *) arrayControllerEmployees;
