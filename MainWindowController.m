@@ -13,7 +13,7 @@
 @implementation MainWindowController
 @synthesize employeeData,monFShiftData,monBShiftData,tueFShiftData,tueBShiftData,
 wedFShiftData,wedBShiftData,thuFShiftData,thuBShiftData,friFShiftData,
-friBShiftData,satFShiftData,satBShiftData,sunFShiftData,sunBShiftData;
+friBShiftData,satFShiftData,satBShiftData,sunFShiftData,sunBShiftData,shiftDataSave;
 
 
 NSString *filePath;
@@ -148,6 +148,7 @@ NSString *filePathShift;
 
 
 -(void)save {
+	//[shiftDataSave addObject:monFShiftData];
 	if (![[NSFileManager defaultManager] 
 		  fileExistsAtPath:filePath] 
 		|| [[NSFileManager defaultManager]
@@ -157,13 +158,27 @@ NSString *filePathShift;
 			 writeToFile:filePath atomically:YES];
 		}
 	
-	[arrayControllerShifts setContent:monFShiftData];
+		[shiftDataSave replaceObjectAtIndex:0 withObject:monFShiftData];
+        [shiftDataSave replaceObjectAtIndex:1 withObject:monBShiftData];
+        [shiftDataSave replaceObjectAtIndex:2 withObject:tueFShiftData];
+        [shiftDataSave replaceObjectAtIndex:3 withObject:tueBShiftData];
+        [shiftDataSave replaceObjectAtIndex:4 withObject:wedFShiftData];
+        [shiftDataSave replaceObjectAtIndex:5 withObject:wedBShiftData];
+        [shiftDataSave replaceObjectAtIndex:6 withObject:thuFShiftData];
+        [shiftDataSave replaceObjectAtIndex:7 withObject:thuBShiftData];
+        [shiftDataSave replaceObjectAtIndex:8 withObject:friFShiftData];
+        [shiftDataSave replaceObjectAtIndex:9 withObject:friBShiftData];
+        [shiftDataSave replaceObjectAtIndex:10 withObject:satFShiftData];
+        [shiftDataSave replaceObjectAtIndex:11 withObject:satBShiftData];
+        [shiftDataSave replaceObjectAtIndex:12 withObject:sunFShiftData];
+        [shiftDataSave replaceObjectAtIndex:13 withObject:sunBShiftData];
+
 	if (![[NSFileManager defaultManager] 
 		  fileExistsAtPath:filePathShift] 
 		|| [[NSFileManager defaultManager]
 			isWritableFileAtPath:filePathShift]) {
 			
-			[[arrayControllerShifts arrangedObjects] 
+			[shiftDataSave
 			 writeToFile:filePathShift atomically:YES];
 		}
 }
@@ -223,6 +238,7 @@ NSString *filePathShift;
 	satBShiftData = [[NSMutableArray alloc]init];
 	sunFShiftData = [[NSMutableArray alloc]init];
 	sunBShiftData = [[NSMutableArray alloc]init];
+	shiftDataSave = [[NSMutableArray alloc]init];
 	
 	if ([[NSFileManager defaultManager]
 		 fileExistsAtPath:filePath]) {
@@ -233,16 +249,33 @@ NSString *filePathShift;
 		}
 		[empFile release];
 	}
+
 	if ([[NSFileManager defaultManager]
 		 fileExistsAtPath:filePathShift]) {
-		NSMutableArray *shiftFile = [[NSMutableArray alloc]
+		shiftDataSave = [[NSMutableArray alloc]
 					initWithContentsOfFile:filePathShift];
-	for (id shift in shiftFile) {
-		[monFShiftData addObject:shift];
-	}
-	[shiftFile release];
+
+		//NSMutableArray *shifts = [[NSMutableArray alloc]init];
+		//[shifts addObject:[shiftFile objectAtIndex:0]];
+		
+		monFShiftData = [shiftDataSave objectAtIndex:0];
+		monBShiftData = [shiftDataSave objectAtIndex:1];
+		tueFShiftData = [shiftDataSave objectAtIndex:2];
+		tueBShiftData = [shiftDataSave objectAtIndex:3];
+		wedFShiftData = [shiftDataSave objectAtIndex:4];
+		wedBShiftData = [shiftDataSave objectAtIndex:5];
+		thuFShiftData = [shiftDataSave objectAtIndex:6];
+		thuBShiftData = [shiftDataSave objectAtIndex:7];
+		friFShiftData = [shiftDataSave objectAtIndex:8];
+		friBShiftData = [shiftDataSave objectAtIndex:9];
+		satFShiftData = [shiftDataSave objectAtIndex:10];
+		satBShiftData = [shiftDataSave objectAtIndex:11];
+		sunFShiftData = [shiftDataSave objectAtIndex:12];
+		sunBShiftData = [shiftDataSave objectAtIndex:13];
 	
-	[arrayControllerShifts setContent:monFShiftData];
+		//[shifts release];
+		[arrayControllerShifts setContent:monFShiftData];
+
 
 	}
 }

@@ -19,6 +19,7 @@
 	IBOutlet NSMatrix *daySelection;
 	IBOutlet NSMatrix *houseSelection;
  
+	NSMutableArray* shiftDataSave;
 	NSMutableArray* employeeData;
 	NSMutableArray* monFShiftData;
 	NSMutableArray* monBShiftData;
@@ -66,5 +67,6 @@
 @property (copy) NSArray* satBShiftData;
 @property (copy) NSArray* sunFShiftData;
 @property (copy) NSArray* sunBShiftData;
+@property (copy) NSArray* shiftDataSave;
 
 @end
