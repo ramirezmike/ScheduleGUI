@@ -51,6 +51,7 @@
 -(IBAction)removeSelected:(id)sender;
 -(IBAction) removeShift:(id)sender; 
 -(IBAction)selectDayForShiftTable:(id)sender;
+-(IBAction)scheduleClassTest:(id)sender;
 
 @property (copy) NSArray* employeeData;
 @property (copy) NSArray* monFShiftData;

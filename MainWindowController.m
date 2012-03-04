@@ -8,6 +8,7 @@
 #import "MainWindowController.h"
 #import "ScheduleGUIAppDelegate.h"
 #import "AddEmpPanelController.h"
+#import "Schedule.h"
 
 
 @implementation MainWindowController
@@ -20,6 +21,12 @@ NSString *filePath;
 NSString *filePathShift;
 
 
+
+-(IBAction)scheduleClassTest:(id)sender {
+	Schedule* new = [[Schedule alloc]init];
+	[new scheduleWithEmployees:employeeData andShifts:shiftDataSave];
+	[new release];
+}
 -(NSArrayController *) arrayControllerEmployees {
 	return arrayControllerEmployees;
 }

@@ -12,9 +12,9 @@
     </object>
     <object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
       <bool key="EncodedWithXMLCoder">YES</bool>
-      <integer value="335"/>
-      <integer value="1004"/>
       <integer value="336"/>
+      <integer value="1004"/>
+      <integer value="691"/>
     </object>
     <object class="NSArray" key="IBDocument.PluginDependencies">
       <bool key="EncodedWithXMLCoder">YES</bool>
@@ -1893,6 +1893,28 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
                         <object class="NSMutableArray" key="NSSubviews">
                           <bool key="EncodedWithXMLCoder">YES</bool>
                           <reference ref="97932928"/>
+                        </object>
+                      </object>
+                      <object class="NSButton" id="108503999">
+                        <reference key="NSNextResponder" ref="998667113"/>
+                        <int key="NSvFlags">268</int>
+                        <string key="NSFrame">{{502, 413}, {96, 32}}</string>
+                        <reference key="NSSuperview" ref="998667113"/>
+                        <string key="NSReuseIdentifierKey">_NS:610</string>
+                        <bool key="NSEnabled">YES</bool>
+                        <object class="NSButtonCell" key="NSCell" id="371695717">
+                          <int key="NSCellFlags">67239424</int>
+                          <int key="NSCellFlags2">134217728</int>
+                          <string key="NSContents">Button</string>
+                          <reference key="NSSupport" ref="1059030236"/>
+                          <string key="NSCellIdentifier">_NS:610</string>
+                          <reference key="NSControlView" ref="108503999"/>
+                          <int key="NSButtonFlags">-2038284033</int>
+                          <int key="NSButtonFlags2">129</int>
+                          <string key="NSAlternateContents"/>
+                          <string key="NSKeyEquivalent"/>
+                          <int key="NSPeriodicDelay">200</int>
+                          <int key="NSPeriodicInterval">25</int>
                         </object>
                       </object>
                     </object>
@@ -3905,6 +3927,14 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
           </object>
           <int key="connectionID">1010</int>
         </object>
+        <object class="IBConnectionRecord">
+          <object class="IBActionConnection" key="connection">
+            <string key="label">scheduleClassTest:</string>
+            <reference key="source" ref="1001"/>
+            <reference key="destination" ref="108503999"/>
+          </object>
+          <int key="connectionID">1161</int>
+        </object>
       </object>
       <object class="IBMutableOrderedSet" key="objectRecords">
         <object class="NSArray" key="orderedObjects">
@@ -4432,6 +4462,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
             <object class="NSMutableArray" key="children">
               <bool key="EncodedWithXMLCoder">YES</bool>
               <reference ref="182254761"/>
+              <reference ref="108503999"/>
             </object>
             <reference key="parent" ref="855474967"/>
           </object>
@@ -5327,6 +5358,20 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
             <reference key="object" ref="433852557"/>
             <reference key="parent" ref="538843100"/>
           </object>
+          <object class="IBObjectRecord">
+            <int key="objectID">1159</int>
+            <reference key="object" ref="108503999"/>
+            <object class="NSMutableArray" key="children">
+              <bool key="EncodedWithXMLCoder">YES</bool>
+              <reference ref="371695717"/>
+            </object>
+            <reference key="parent" ref="998667113"/>
+          </object>
+          <object class="IBObjectRecord">
+            <int key="objectID">1160</int>
+            <reference key="object" ref="371695717"/>
+            <reference key="parent" ref="108503999"/>
+          </object>
         </object>
       </object>
       <object class="NSMutableDictionary" key="flattenedProperties">
@@ -5359,6 +5404,8 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
           <string>1146.IBPluginDependency</string>
           <string>1147.IBPluginDependency</string>
           <string>1148.IBPluginDependency</string>
+          <string>1159.IBPluginDependency</string>
+          <string>1160.IBPluginDependency</string>
           <string>335.IBEditorWindowLastContentRect</string>
           <string>335.IBPluginDependency</string>
           <string>335.IBWindowTemplateEditedContentRect</string>
@@ -5530,6 +5577,8 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
           <object class="NSAffineTransform">
             <bytes key="NSTransformStruct">P4AAAL+AAADB+AAAw+WAAA</bytes>
           </object>
+          <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+          <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -5760,7 +5809,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
         </object>
       </object>
       <nil key="sourceID"/>
-      <int key="maxID">1158</int>
+      <int key="maxID">1161</int>
     </object>
     <object class="IBClassDescriber" key="IBDocument.Classes">
       <object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -5774,6 +5823,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <bool key="EncodedWithXMLCoder">YES</bool>
               <string>removeSelected:</string>
               <string>removeShift:</string>
+              <string>scheduleClassTest:</string>
               <string>selectDayForShiftTable:</string>
               <string>sendCalltoShowAddEmpWindow:</string>
               <string>sendCalltoShowAddShiftWindow:</string>
@@ -5782,6 +5832,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
             </object>
             <object class="NSMutableArray" key="dict.values">
               <bool key="EncodedWithXMLCoder">YES</bool>
+              <string>id</string>
               <string>id</string>
               <string>id</string>
               <string>id</string>
@@ -5797,6 +5848,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               <bool key="EncodedWithXMLCoder">YES</bool>
               <string>removeSelected:</string>
               <string>removeShift:</string>
+              <string>scheduleClassTest:</string>
               <string>selectDayForShiftTable:</string>
               <string>sendCalltoShowAddEmpWindow:</string>
               <string>sendCalltoShowAddShiftWindow:</string>
@@ -5811,6 +5863,10 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
               </object>
               <object class="IBActionInfo">
                 <string key="name">removeShift:</string>
+                <string key="candidateClassName">id</string>
+              </object>
+              <object class="IBActionInfo">
+                <string key="name">scheduleClassTest:</string>
                 <string key="candidateClassName">id</string>
               </object>
               <object class="IBActionInfo">
