@@ -13,6 +13,7 @@
 	
 	IBOutlet NSArrayController *arrayControllerEmployees;
 	IBOutlet NSArrayController *arrayControllerShifts;
+	IBOutlet NSArrayController *arrayControllerSchedule;
 
 	
 	IBOutlet NSTableView *tblEmployees;
@@ -21,6 +22,7 @@
  
 	NSMutableArray* shiftDataSave;
 	NSMutableArray* employeeData;
+	NSMutableArray* scheduleData;
 	NSMutableArray* monFShiftData;
 	NSMutableArray* monBShiftData;
 	NSMutableArray* tueFShiftData;
@@ -40,6 +42,7 @@
 
 -(NSArrayController *) arrayControllerEmployees;
 -(NSArrayController *) arrayControllerShifts;
+-(NSArrayController *) arrayControllerSchedule;
 
 
 -(void)setParent:(id)sender;
@@ -49,11 +52,13 @@
 -(IBAction)sendCalltoShowEditEmpWindow:(id)sender;
 -(IBAction)sendCalltoShowAddShiftWindow:(id)sender;
 -(IBAction)removeSelected:(id)sender;
--(IBAction) removeShift:(id)sender; 
+-(IBAction)removeShift:(id)sender; 
 -(IBAction)selectDayForShiftTable:(id)sender;
 -(IBAction)scheduleClassTest:(id)sender;
 
 @property (copy) NSArray* employeeData;
+@property (copy) NSArray* scheduleData;
+@property (copy) NSArray* shiftDataSave;
 @property (copy) NSArray* monFShiftData;
 @property (copy) NSArray* monBShiftData;
 @property (copy) NSArray* tueFShiftData;
@@ -68,6 +73,5 @@
 @property (copy) NSArray* satBShiftData;
 @property (copy) NSArray* sunFShiftData;
 @property (copy) NSArray* sunBShiftData;
-@property (copy) NSArray* shiftDataSave;
 
 @end

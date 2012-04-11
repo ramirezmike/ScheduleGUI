@@ -10,12 +10,14 @@
 
 
 @interface Schedule : NSObject {
-	NSMutableArray* schedule; 
+
 }
 
 
 -(NSMutableArray *) scheduleWithEmployees:(NSMutableArray *)employees 
-								andShifts:(NSMutableArray *)shifts;
+								andShifts:(NSMutableArray *)shifts
+								toController:(NSArrayController *)controller;
+
 
 /*
  if employee and available shift are same position

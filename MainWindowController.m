@@ -12,7 +12,7 @@
 
 
 @implementation MainWindowController
-@synthesize employeeData,monFShiftData,monBShiftData,tueFShiftData,tueBShiftData,
+@synthesize employeeData,scheduleData,monFShiftData,monBShiftData,tueFShiftData,tueBShiftData,
 wedFShiftData,wedBShiftData,thuFShiftData,thuBShiftData,friFShiftData,
 friBShiftData,satFShiftData,satBShiftData,sunFShiftData,sunBShiftData,shiftDataSave;
 
@@ -24,7 +24,7 @@ NSString *filePathShift;
 
 -(IBAction)scheduleClassTest:(id)sender {
 	Schedule* new = [[Schedule alloc]init];
-	[new scheduleWithEmployees:employeeData andShifts:shiftDataSave];
+	[new scheduleWithEmployees:employeeData andShifts:shiftDataSave toController:arrayControllerSchedule];
 	[new release];
 }
 -(NSArrayController *) arrayControllerEmployees {
@@ -35,6 +35,9 @@ NSString *filePathShift;
 	return arrayControllerShifts;
 }
 
+-(NSArrayController *) arrayControllerSchedule {
+	return arrayControllerSchedule;
+}
 -(void)setParent:(id)sender {
 	parent = sender;
 }
@@ -231,6 +234,7 @@ NSString *filePathShift;
 					  ofType:@"plist"]retain];
 
 	employeeData = [[NSMutableArray alloc]init];
+	scheduleData = [[NSMutableArray alloc]init];
 	monFShiftData = [[NSMutableArray alloc]init];
 	monBShiftData = [[NSMutableArray alloc]init];
 	tueFShiftData = [[NSMutableArray alloc]init];
