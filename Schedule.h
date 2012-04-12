@@ -17,9 +17,10 @@
 -(NSMutableArray *) scheduleWithEmployees:(NSMutableArray *)employees 
 								andShifts:(NSMutableArray *)shifts
 								toController:(NSArrayController *)controller;
-
+-(BOOL)isEmployee:(NSDictionary *) employee inArray:(NSArrayController *) controller;
 
 /*
+ if employee is already in the list **DONE**
  if employee and available shift are same position
  if shift available
  if employee available shift's day

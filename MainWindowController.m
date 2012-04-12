@@ -24,7 +24,8 @@ NSString *filePathShift;
 
 -(IBAction)scheduleClassTest:(id)sender {
 	Schedule* new = [[Schedule alloc]init];
-	[new scheduleWithEmployees:employeeData andShifts:shiftDataSave toController:arrayControllerSchedule];
+	[new scheduleWithEmployees:employeeData andShifts:shiftDataSave 
+				  toController:arrayControllerSchedule];
 	[new release];
 }
 -(NSArrayController *) arrayControllerEmployees {
