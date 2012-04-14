@@ -22,50 +22,61 @@ NSString *filePathShift;
 
 
 
--(IBAction)scheduleClassTest:(id)sender {
+-(IBAction)scheduleClassTest:(id)sender 
+{
 	Schedule* new = [[Schedule alloc]init];
 	[new scheduleWithEmployees:employeeData andShifts:shiftDataSave 
 				  toController:arrayControllerSchedule];
 	[new release];
 }
--(NSArrayController *) arrayControllerEmployees {
+-(NSArrayController *) arrayControllerEmployees 
+{
 	return arrayControllerEmployees;
 }
 
--(NSArrayController *) arrayControllerShifts {
+-(NSArrayController *) arrayControllerShifts 
+{
 	return arrayControllerShifts;
 }
 
--(NSArrayController *) arrayControllerSchedule {
+-(NSArrayController *) arrayControllerSchedule 
+{
 	return arrayControllerSchedule;
 }
--(void)setParent:(id)sender {
+-(void)setParent:(id)sender 
+{
 	parent = sender;
 }
 
 
 
--(IBAction)sendCalltoShowAddEmpWindow:(id)sender {
+-(IBAction)sendCalltoShowAddEmpWindow:(id)sender 
+{
 	[parent	showAddEmpWindow:self];
 }
 
--(IBAction)sendCalltoShowEditEmpWindow:(id)sender {
+-(IBAction)sendCalltoShowEditEmpWindow:(id)sender 
+{
 	[parent showEditEmpWindow:self];
 }
 
--(IBAction)sendCalltoShowAddShiftWindow:(id)sender {
+-(IBAction)sendCalltoShowAddShiftWindow:(id)sender 
+{
 	[parent showAddShiftWindow:self withController:arrayControllerShifts andTitle:title];	
 }
 
--(IBAction) removeSelected:(id)sender {
+-(IBAction) removeSelected:(id)sender 
+{
 	[arrayControllerEmployees remove:self];
 }
 
--(IBAction) removeShift:(id)sender {
+-(IBAction) removeShift:(id)sender 
+{
 	[arrayControllerShifts remove:self];
 }
 
--(IBAction)selectDayForShiftTable:(id)sender {
+-(IBAction)selectDayForShiftTable:(id)sender 
+{
 	switch ([daySelection selectedRow]) {
 		case 0:
 			switch ([houseSelection selectedRow]) {
@@ -173,16 +184,18 @@ NSString *filePathShift;
 }
 
 
--(void)save {
+-(void)save 
+{
 	//[shiftDataSave addObject:monFShiftData];
 	if (![[NSFileManager defaultManager] 
 		  fileExistsAtPath:filePath] 
 		|| [[NSFileManager defaultManager]
-			isWritableFileAtPath:filePath]) {
+			isWritableFileAtPath:filePath]) 
+	{
 			
 			[[arrayControllerEmployees arrangedObjects] 
 			 writeToFile:filePath atomically:YES];
-		}
+	}
 	
 		[shiftDataSave replaceObjectAtIndex:0 withObject:monFShiftData];
         [shiftDataSave replaceObjectAtIndex:1 withObject:monBShiftData];
@@ -199,30 +212,34 @@ NSString *filePathShift;
         [shiftDataSave replaceObjectAtIndex:12 withObject:sunFShiftData];
         [shiftDataSave replaceObjectAtIndex:13 withObject:sunBShiftData];
 
+	
 	if (![[NSFileManager defaultManager] 
 		  fileExistsAtPath:filePathShift] 
 		|| [[NSFileManager defaultManager]
-			isWritableFileAtPath:filePathShift]) {
-			
-			[shiftDataSave
-			 writeToFile:filePathShift atomically:YES];
-		}
+			isWritableFileAtPath:filePathShift]) 
+	{
+		[shiftDataSave writeToFile:filePathShift atomically:YES];
+	}
 }
 
 
--(void)controlTextDidChange:(NSNotification *)obj {
+-(void)controlTextDidChange:(NSNotification *)obj 
+{
 	
 	[[obj object] setIntValue:[[obj object] intValue]];
 	//only allows numbers in field
 	
-	switch (((NSTextField *)[obj object]).tag) {
+	switch (((NSTextField *)[obj object]).tag) 
+	{
 		case 0:
-			if ([[[obj object] stringValue] length] > 2) {
+			if ([[[obj object] stringValue] length] > 2) 
+			{
 				[[obj object]setStringValue:[[[obj object] 
 						stringValue] substringToIndex:2]];
 				//keeps length of string to 2 characters
 			}
-			if ([[obj object]intValue] > 50) {
+			if ([[obj object]intValue] > 50) 
+			{
 				[[obj object]setStringValue:[[[obj object] 
 						stringValue] substringToIndex:1]];
 				//keeps number value under 50
@@ -236,12 +253,14 @@ NSString *filePathShift;
 
 
 
--(id)init {
+-(id)init 
+{
 	self = [super initWithWindowNibName:@"MainWindow"];
 	return self;
 }
 
--(void)awakeFromNib {
+-(void)awakeFromNib 
+{
 	filePath = [[[NSBundle mainBundle] 
 				 pathForResource:@"Employees" 
 				 ofType:@"plist"]retain];
@@ -251,6 +270,7 @@ NSString *filePathShift;
 
 	employeeData = [[NSMutableArray alloc]init];
 	scheduleData = [[NSMutableArray alloc]init];
+	
 	monFShiftData = [[NSMutableArray alloc]init];
 	monBShiftData = [[NSMutableArray alloc]init];
 	tueFShiftData = [[NSMutableArray alloc]init];
@@ -282,9 +302,6 @@ NSString *filePathShift;
 		shiftDataSave = [[NSMutableArray alloc]
 					initWithContentsOfFile:filePathShift];
 
-		//NSMutableArray *shifts = [[NSMutableArray alloc]init];
-		//[shifts addObject:[shiftFile objectAtIndex:0]];
-		
 		monFShiftData = [shiftDataSave objectAtIndex:0];
 		monBShiftData = [shiftDataSave objectAtIndex:1];
 		tueFShiftData = [shiftDataSave objectAtIndex:2];
@@ -300,9 +317,8 @@ NSString *filePathShift;
 		sunFShiftData = [shiftDataSave objectAtIndex:12];
 		sunBShiftData = [shiftDataSave objectAtIndex:13];
 	
-		//[shifts release];
+		
 		[arrayControllerShifts setContent:monFShiftData];
-
 		title = @"monF";
 
 	}

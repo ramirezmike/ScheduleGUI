@@ -3,7 +3,7 @@
 //  ScheduleGUI
 //
 //  Created by Michael Ramirez on 3/3/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012. All rights reserved.
 //
 
 #import "Schedule.h"
@@ -16,30 +16,33 @@
 								andShifts:(NSMutableArray *)shifts
 							 toController:(NSArrayController *)controller
 {
-	int employeeCount = 1;
-	int shiftCount = 1;
+	//int shiftCount = 1;
 	
 	for (NSMutableArray* shiftsArray in shifts) 
 	{
 		for (NSDictionary* shift in shiftsArray) 
 		{
+			//int employeeCount = 1;
 			for (NSDictionary* emp in employees) 
 			{
+				//employeeCount++;
 				if ([self isEmployee:emp inArray:controller]) 
 				{
-					break;
+					continue;
+				}
+				if (![self isShift:shift availableInArray:controller]) 
+				{
+					continue;
 				}
 					NSMutableDictionary *tempDictionary = [NSMutableDictionary
 							dictionaryWithObjectsAndKeys:
+							[shift objectForKey:@"title"],@"title",
 							[emp objectForKey:@"name"],@"name",
 							[shift objectForKey:@"timeIn"],@"monday",
 										  nil];
 					[controller addObject:tempDictionary];
-					NSLog(@"Employee %i Name: %@",employeeCount,[emp objectForKey:@"name"]);
-					NSLog(@"Shift %i Time In: %@",shiftCount,[shift objectForKey:@"timeIn"]);
-					shiftCount++;
-					employeeCount++;
-			}
+			}			
+			//shiftCount++;
 		}
 	}
 	return employees;
@@ -61,8 +64,17 @@
 
 -(BOOL)isShift:(NSDictionary *)shift availableInArray:(NSArrayController *) controller
 {
-//	for (NSMutableDictionary* addedShift in [controller content])
-	return FALSE;
+	for (NSMutableDictionary* addedShift in [controller content])
+	{
+		if ([addedShift objectForKey:@"title"] != [shift objectForKey:@"title"]) {
+			continue;
+		}
+		
+		if ([addedShift objectForKey:@"monday"] == [shift objectForKey:@"timeIn"]) {
+			return FALSE;
+		}
+	}
+	return TRUE;
 }
 
 @end

@@ -22,13 +22,14 @@
 
 /*
  if employee is already in the list **DONE**
- if shift available
+ if shift available **Semi-Done**
+ if open shift exists
  if employee and available shift are same position
  if employee available shift's day
  if employee is currently working
  if employee has available hours left
  if shift fits in employee's available hours for that day
  if shift is less than an hour away from another shift (for doubles)
- */
+*/
 
 @end
