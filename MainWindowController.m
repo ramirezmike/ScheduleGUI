@@ -54,7 +54,7 @@ NSString *filePathShift;
 }
 
 -(IBAction)sendCalltoShowAddShiftWindow:(id)sender {
-	[parent showAddShiftWindow:self withController:arrayControllerShifts];	
+	[parent showAddShiftWindow:self withController:arrayControllerShifts andTitle:title];	
 }
 
 -(IBAction) removeSelected:(id)sender {
@@ -71,9 +71,11 @@ NSString *filePathShift;
 			switch ([houseSelection selectedRow]) {
 				case 0:
 				[arrayControllerShifts setContent:monFShiftData];
+				title = @"monF";
 					break;
 				case 1:
 				[arrayControllerShifts setContent:monBShiftData];
+				title = @"monB";
 					break;
 				default:
 					break;
@@ -84,9 +86,11 @@ NSString *filePathShift;
 			switch ([houseSelection selectedRow]) {
 				case 0:
 				[arrayControllerShifts setContent:tueFShiftData];
+				title = @"tueF";
 					break;
 				case 1:
 				[arrayControllerShifts setContent:tueBShiftData];
+				title = @"tueB";
 					break;
 				default:
 					break;
@@ -96,9 +100,11 @@ NSString *filePathShift;
 			switch ([houseSelection selectedRow]) {
 				case 0:
 				[arrayControllerShifts setContent:wedFShiftData];
+				title = @"wedF";
 					break;
 				case 1:
 				[arrayControllerShifts setContent:wedBShiftData];
+				title = @"wedB";
 					break;
 				default:
 					break;
@@ -108,9 +114,11 @@ NSString *filePathShift;
 			switch ([houseSelection selectedRow]) {
 				case 0:
 				[arrayControllerShifts setContent:thuFShiftData];
+				title = @"thuF";
 					break;
 				case 1:
 				[arrayControllerShifts setContent:thuBShiftData];
+				title = @"thuB";
 					break;
 				default:
 					break;
@@ -120,9 +128,11 @@ NSString *filePathShift;
 			switch ([houseSelection selectedRow]) {
 				case 0:
 				[arrayControllerShifts setContent:friFShiftData];
+				title = @"friF";
 					break;
 				case 1:
 				[arrayControllerShifts setContent:friBShiftData];
+				title = @"friB";
 					break;
 				default:
 					break;
@@ -132,9 +142,11 @@ NSString *filePathShift;
 			switch ([houseSelection selectedRow]) {
 				case 0:
 				[arrayControllerShifts setContent:satFShiftData];
+				title = @"satF";
 					break;
 				case 1:
 				[arrayControllerShifts setContent:satBShiftData];
+				title = @"satB";
 					break;
 				default:
 					break;
@@ -144,9 +156,11 @@ NSString *filePathShift;
 			switch ([houseSelection selectedRow]) {
 				case 0:
 				[arrayControllerShifts setContent:sunFShiftData];
+				title = @"sunF";
 					break;
 				case 1:
 				[arrayControllerShifts setContent:sunBShiftData];
+				title = @"sunB";
 					break;
 				default:
 					break;
@@ -155,6 +169,7 @@ NSString *filePathShift;
 		default:
 			break;
 	}
+	NSLog(@"In Main: %@", title);
 }
 
 
@@ -288,6 +303,7 @@ NSString *filePathShift;
 		//[shifts release];
 		[arrayControllerShifts setContent:monFShiftData];
 
+		title = @"monF";
 
 	}
 }

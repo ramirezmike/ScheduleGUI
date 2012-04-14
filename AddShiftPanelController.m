@@ -12,12 +12,15 @@
 @implementation AddShiftPanelController
 
 -(void)showInWindow:(NSWindow *)window 
-	 withController: (NSArrayController *) controller {
+	 withController: (NSArrayController *) controller 
+	 andTitle:(NSString *) title
+{
 	if (!panel) {
 		[NSBundle loadNibNamed:@"AddShiftPanel" owner:self];
 	}
 	
 	controllerHolder = controller;
+	currentTitle = title;
 		
 	[NSApp beginSheet:panel
 	   modalForWindow:window
@@ -26,16 +29,19 @@
 		  contextInfo: nil];
 }
 
--(IBAction)closeWindow:(id)sender {
+-(IBAction)closeWindow:(id)sender 
+{
 	[panel orderOut:nil];
 	[NSApp endSheet:panel];
 }
 
--(void)setParent:(id)sender {
+-(void)setParent:(id)sender 
+{
 	parentWindow = sender;
 }
 
--(IBAction)addShift:(id)sender {
+-(IBAction)addShift:(id)sender 
+{
 	NSString* posPopValue = [NSString 
 	stringWithFormat:@"%d",
 	[positionPop indexOfSelectedItem]];
@@ -55,6 +61,7 @@
 		posPopValue,@"position",
 		timeInPopValue,@"timeInPop",
 		timeOutPopValue,@"timeOutPop",
+		currentTitle,@"title",
 					 nil];
 	[controllerHolder addObject:dict];
 	[self closeWindow:nil];

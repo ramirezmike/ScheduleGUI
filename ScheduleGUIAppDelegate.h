@@ -29,7 +29,8 @@ NSObject <NSApplicationDelegate> {
 -(IBAction)showAddEmpWindow:(id)sender;
 -(IBAction)showEditEmpWindow:(id)sender;
 -(void)showAddShiftWindow:(id)sender 
-withController:(NSArrayController *) controller;
+withController:(NSArrayController *) controller
+andTitle:(NSString *) currentTitle;
 -(IBAction)saveCalltoEverything:(id)sender;
 
 @end

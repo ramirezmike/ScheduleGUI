@@ -9,6 +9,7 @@
 
 @interface AddShiftPanelController : NSWindowController {
 	id parentWindow;
+	NSString *currentTitle;
 	
 	IBOutlet id panel;
 	
@@ -22,7 +23,8 @@
 }
 
 -(void)showInWindow:(NSWindow *)window 
-withController: (NSArrayController *) controller;
+withController: (NSArrayController *) controller
+andTitle:(NSString *) title;
 -(IBAction)closeWindow:(id)sender;
 -(IBAction)addShift:(id)sender;
 -(void)setParent:(id)sender;

@@ -19,14 +19,14 @@
 	int employeeCount = 1;
 	int shiftCount = 1;
 	
-	for (NSMutableArray* array in shifts) 
+	for (NSMutableArray* shiftsArray in shifts) 
 	{
-		for (NSDictionary* shift in array) 
+		for (NSDictionary* shift in shiftsArray) 
 		{
 			for (NSDictionary* emp in employees) 
 			{
-				if ([self isEmployee:emp inArray:controller]) {
-					NSLog(@"%@ is in the array\n", [emp objectForKey:@"name"]);
+				if ([self isEmployee:emp inArray:controller]) 
+				{
 					break;
 				}
 					NSMutableDictionary *tempDictionary = [NSMutableDictionary
@@ -56,6 +56,12 @@
 		}
 	}
 	
+	return FALSE;
+}
+
+-(BOOL)isShift:(NSDictionary *)shift availableInArray:(NSArrayController *) controller
+{
+//	for (NSMutableDictionary* addedShift in [controller content])
 	return FALSE;
 }
 

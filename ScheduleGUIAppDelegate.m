@@ -48,14 +48,16 @@
 }
 
 -(void)showAddShiftWindow:(id)sender 
-withController:(NSArrayController *) controller {
+withController:(NSArrayController *) controller
+andTitle:(NSString *) currentTitle {
 	if (!shiftAddWin) {
 		shiftAddWin = [[AddShiftPanelController alloc]init];
 	}
 	
 	[shiftAddWin setParent:sender];
 	[shiftAddWin showInWindow:[NSApp mainWindow] 
-			   withController:controller];
+			   withController:controller
+			   andTitle: currentTitle];
 }
 	
 

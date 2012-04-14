@@ -18,11 +18,12 @@
 								andShifts:(NSMutableArray *)shifts
 								toController:(NSArrayController *)controller;
 -(BOOL)isEmployee:(NSDictionary *) employee inArray:(NSArrayController *) controller;
+-(BOOL)isShift:()shift availableInArray:(NSArrayController *) controller;
 
 /*
  if employee is already in the list **DONE**
- if employee and available shift are same position
  if shift available
+ if employee and available shift are same position
  if employee available shift's day
  if employee is currently working
  if employee has available hours left

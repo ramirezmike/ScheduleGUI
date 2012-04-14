@@ -10,6 +10,7 @@
 @interface MainWindowController : NSWindowController {
 
 	id parent;
+	NSString *title;
 	
 	IBOutlet NSArrayController *arrayControllerEmployees;
 	IBOutlet NSArrayController *arrayControllerShifts;
@@ -37,7 +38,7 @@
 	NSMutableArray* satBShiftData;
 	NSMutableArray* sunFShiftData;
 	NSMutableArray* sunBShiftData;
-		
+			
 }
 
 -(NSArrayController *) arrayControllerEmployees;
@@ -51,8 +52,8 @@
 -(IBAction)sendCalltoShowAddEmpWindow:(id)sender;
 -(IBAction)sendCalltoShowEditEmpWindow:(id)sender;
 -(IBAction)sendCalltoShowAddShiftWindow:(id)sender;
--(IBAction)removeSelected:(id)sender;
 -(IBAction)removeShift:(id)sender; 
+-(IBAction) removeSelected:(id)sender;
 -(IBAction)selectDayForShiftTable:(id)sender;
 -(IBAction)scheduleClassTest:(id)sender;
 
